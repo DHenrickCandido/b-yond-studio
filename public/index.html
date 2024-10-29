@@ -8,26 +8,15 @@
     <meta name="color-scheme" content="light only">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Anybody:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="images/icon.png">
+    <link rel="stylesheet" href="font/stylesheet.css">
+    <link rel="stylesheet" href="styles.css">
+
 </head>
 
 <body class="bg-black">
-    <style>
-        body {
-            font-family: 'Raleway', sans-serif;
-            /* background-image: url('./images/body-bg.png');
-            background-size: cover;  */
-        }
 
-        .bg-custom {
-            background-image: url('./images/top-bg.png');
-            background-size: cover; 
-            background-repeat: no-repeat; 
-            background-position: center bottom; 
-        
-        }
-    </style>
     <header class="flex items-center justify-between p-12">
         <div class="text-white text-xl font-bold px-4">
             <img src="./images/b-yond-icon.png" alt="Logo" class="h-6" >  
@@ -35,17 +24,32 @@
         
     </header>
 
-    <div class="flex items-center  justify-center  h-screen bg-custom">
-        <div class="px-4">
-            <img class="" src="./images/top-big-logo.png" alt="Logo">  
+    <div class="flex items-center justify-center h-screen bg-custom">
+        <div class="flex flex-col px-4">
+  
+            <div class="px-4">
+                <img class="" src="./images/top-big-logo.png" alt="Logo">  
+            </div>
+            
+
+            <div class="grid grid-cols-3 h-auto relative pt-36">
+                <div class="col-start-3 flex">
+                    <div class="vertical-line"></div>
+
+                    <p class="text-left text-2xl font-light text-white pl-4">
+                        Every project is a chance to see <br> things anew, to try the untried, <br> and <i>go beyond</i> the expected.
+                    </p>
+                </div>
+            </div>
         </div>
+        
     </div>
 
-    <div class="text-center" style="background-image: url('./images/body-bg.png');">
+    <div class="text-center bg-custom2">
         <img src="./images/icon-bg.png" alt="Logo" class="h-36 mx-auto mb-4" > 
 
-        <p class="text-5xl md:text-6xl text-gray-700 pb-8">
-            Uma melhor <b>comunicação</b>
+        <p class="text-5xl md:text-6xl text-gray-700 pb-8 font-alga">
+            Uma melhor portfolio
         </p>
         <p class="font-regular text-gray-700 text-xl md:text-2xl max-w-3xl mx-auto px-6 pb-8">
             Mazí oferece tudo o que você precisa para conectar seus participantes, compartilhar insights e elevar a interação - seja em conferências, talks, workshops ou eventos corporativos.

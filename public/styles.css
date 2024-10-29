@@ -1,3 +1,39 @@
+.vertical-line {
+  width: 4px;               /* Thickness of the line */
+  height: 85px;            /* Height of the line */
+  background-color: white;  /* Color of the line */
+}
+
+
+body {
+  font-family: 'Anybody', sans-serif;
+
+}
+
+.font-alga {
+  font-family: 'Alga';
+  font-weight: 200;
+  font-style: italic;
+}
+
+.bg-custom {
+  background-image: url('./images/top-bg.png');
+  background-size: cover; 
+  background-repeat: no-repeat; 
+  background-position: center bottom; 
+
+}
+
+.bg-custom2 {
+  background-image: url('./images/body-bg.png');
+  background-size: cover; 
+  background-repeat: no-repeat; 
+  background-position: center bottom; 
+
+}
+
+
+
 /*
 ! tailwindcss v3.4.10 | MIT License | https://tailwindcss.com
 */
