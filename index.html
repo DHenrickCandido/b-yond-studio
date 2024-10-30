@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>B-yond Studio</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <meta name="color-scheme" content="light only">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anybody:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="images/icon.png">
+    <link rel="stylesheet" href="font/stylesheet.css">
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body class="bg-black">
+
+    <div class="h-screen bg-custom flex flex-col">
+        <!-- Header Section -->
+        <header class="flex items-center justify-between p-12">
+            <div class="text-white text-xl font-bold px-4">
+                <img src="./images/b-yond-icon.png" alt="Logo" class="h-6">  
+            </div>
+        </header>
+    
+        <!-- Main Content Section -->
+        <div class="flex flex-grow items-center justify-center">
+            <div class="flex flex-col px-4">
+      
+                <div class="px-4">
+                    <img src="./images/top-big-logo.png" alt="Logo">  
+                </div>
+                
+                <div class="grid grid-cols-3 h-auto relative pt-36">
+                    <div class="col-start-3 flex">
+                        <div class="vertical-line"></div>
+    
+                        <p class="text-left text-2xl font-light text-white pl-4">
+                            Every project is a chance to see <br> things anew, to try the untried, <br> and <i>go beyond</i> the expected.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <div class="text-center bg-custom2 pt-28 h-screen">
+        <div class="flex flex-col px-4">
+            <div class="flex h-auto relative">
+                <div class=" w-1/3 col-start-1">
+                    <p class="text-5xl text-white font-black">ABOUT</p>
+                    <p class="text-5xl text-white font-alga">our studio</p>
+                </div>
+                <div class="flex-grow w-auto text-white text-2xl text-left font-light">
+                    <p class="">At b-yond studio we work using smart tech and quick feedback<br>to create solutions that are simple, personal, and <b>built<br>with the user in mind.</b></p>
+                    <p class="py-8"><b>We believe in moving fast but with purpose.</b><br>Every step is an opportunity to refine, improve, and adapt. Our<br>focus is not just on getting things done, but on doing them well<br>—crafting MVPs that are both functional and meaningful,<br>pushing boundaries with every iteration.</p>
+                </div>
+            </div>
+        </div>
+    
+
+
+        <div id="div-numbers" class="grid grid-cols-1 md:grid-cols-3 gap-6 px-6 md:py-24 text-white">
+            <div class="">
+                <p id="downloads" class="text-9xl font-black"><b>580</b></p>
+                <p class="text-6xl font-alga">downloads</p>
+                <p class="text-xl font-light pt-8">total downloads so far</p>
+            </div>
+        
+            <div class="">
+                <p id="impressions" class="text-9xl font-black"><b>37</b>k</p>
+                <p class="text-6xl font-alga">impressions</p>
+                <p class="text-xl font-light pt-8">On the App Store</p>
+
+            </div>
+        
+            <div class="">
+                <p id="countries" class="text-9xl font-black"><b>70</b></p>
+                <p class="text-6xl font-alga">countries</p>
+                <p class="text-xl font-light pt-8">Reached with the apps</p>
+
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        function animateValue(id, start, end, duration, suffix = "") {
+            const element = document.getElementById(id);
+            let startTime = null;
+    
+            function step(currentTime) {
+                if (!startTime) startTime = currentTime;
+                const progress = Math.min((currentTime - startTime) / duration, 1);
+                const value = Math.floor(progress * (end - start) + start);
+                element.textContent = value.toLocaleString() + suffix;
+    
+                if (progress < 1) {
+                    requestAnimationFrame(step);
+                }
+            }
+    
+            requestAnimationFrame(step);
+        }
+    
+        // Use Intersection Observer to start animation on scroll
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    // Start animations
+                    animateValue("downloads", 0, 580, 2000);
+                    animateValue("impressions", 0, 37, 2500, "k"); // 37k impressions
+                    animateValue("countries", 0, 70, 2000);
+                    observer.unobserve(entry.target); // Stop observing after animation starts
+                }
+            });
+        }, { threshold: 0.5 }); // Adjust threshold as needed
+    
+        // Target the parent container of the counters
+        const targetElement = document.getElementById('div-numbers');
+        observer.observe(targetElement);
+    </script>
+    
+</body>
+
+</html>
