@@ -111,7 +111,7 @@
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     // Start animations
-                    animateValue("downloads", 0, 1,3, 2000, "k");
+                    animateValue("downloads", 0, 1.3, 2000, "k");
                     animateValue("impressions", 0, 37, 2500, "k"); // 37k impressions
                     animateValue("countries", 0, 70, 2000);
                     observer.unobserve(entry.target); // Stop observing after animation starts
